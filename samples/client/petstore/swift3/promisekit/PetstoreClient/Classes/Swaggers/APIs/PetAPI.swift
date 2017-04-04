@@ -187,14 +187,14 @@ open class PetAPI: APIBase {
 </Pet>}, {contentType=application/json, example=[ {
   "photoUrls" : [ "aeiou" ],
   "name" : "doggie",
-  "id" : 1,
+  "id" : 0,
   "category" : {
     "name" : "aeiou",
-    "id" : 0
+    "id" : 6
   },
   "tags" : [ {
     "name" : "aeiou",
-    "id" : 2
+    "id" : 1
   } ],
   "status" : "available"
 } ]}]
@@ -210,14 +210,14 @@ open class PetAPI: APIBase {
 </Pet>}, {contentType=application/json, example=[ {
   "photoUrls" : [ "aeiou" ],
   "name" : "doggie",
-  "id" : 1,
+  "id" : 0,
   "category" : {
     "name" : "aeiou",
-    "id" : 0
+    "id" : 6
   },
   "tags" : [ {
     "name" : "aeiou",
-    "id" : 2
+    "id" : 1
   } ],
   "status" : "available"
 } ]}]
@@ -291,14 +291,14 @@ open class PetAPI: APIBase {
 </Pet>}, {contentType=application/json, example=[ {
   "photoUrls" : [ "aeiou" ],
   "name" : "doggie",
-  "id" : 4,
+  "id" : 0,
   "category" : {
     "name" : "aeiou",
-    "id" : 9
+    "id" : 6
   },
   "tags" : [ {
     "name" : "aeiou",
-    "id" : 3
+    "id" : 1
   } ],
   "status" : "available"
 } ]}]
@@ -314,14 +314,14 @@ open class PetAPI: APIBase {
 </Pet>}, {contentType=application/json, example=[ {
   "photoUrls" : [ "aeiou" ],
   "name" : "doggie",
-  "id" : 4,
+  "id" : 0,
   "category" : {
     "name" : "aeiou",
-    "id" : 9
+    "id" : 6
   },
   "tags" : [ {
     "name" : "aeiou",
-    "id" : 3
+    "id" : 1
   } ],
   "status" : "available"
 } ]}]
@@ -395,14 +395,14 @@ open class PetAPI: APIBase {
 </Pet>}, {contentType=application/json, example={
   "photoUrls" : [ "aeiou" ],
   "name" : "doggie",
-  "id" : 8,
+  "id" : 0,
   "category" : {
     "name" : "aeiou",
-    "id" : 5
+    "id" : 6
   },
   "tags" : [ {
     "name" : "aeiou",
-    "id" : 4
+    "id" : 1
   } ],
   "status" : "available"
 }}]
@@ -418,14 +418,14 @@ open class PetAPI: APIBase {
 </Pet>}, {contentType=application/json, example={
   "photoUrls" : [ "aeiou" ],
   "name" : "doggie",
-  "id" : 8,
+  "id" : 0,
   "category" : {
     "name" : "aeiou",
-    "id" : 5
+    "id" : 6
   },
   "tags" : [ {
     "name" : "aeiou",
-    "id" : 4
+    "id" : 1
   } ],
   "status" : "available"
 }}]

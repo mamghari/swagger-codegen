@@ -45,7 +45,7 @@ open class StoreAPI: APIBase {
 
     /**
      Delete purchase order by ID
-     - DELETE /store/order/{orderId}
+     - DELETE /store/order/{order_id}
      - For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
      
      - parameter orderId: (path) ID of the order that needs to be deleted 
@@ -53,8 +53,8 @@ open class StoreAPI: APIBase {
      - returns: RequestBuilder<Void> 
      */
     open class func deleteOrderWithRequestBuilder(orderId: String) -> RequestBuilder<Void> {
-        var path = "/store/order/{orderId}"
-        path = path.replacingOccurrences(of: "{orderId}", with: "\(orderId)", options: .literal, range: nil)
+        var path = "/store/order/{order_id}"
+        path = path.replacingOccurrences(of: "{order_id}", with: "\(orderId)", options: .literal, range: nil)
         let URLString = PetstoreClientAPI.basePath + path
         let parameters: [String:Any]? = nil
 
@@ -104,7 +104,7 @@ open class StoreAPI: APIBase {
        - type: apiKey api_key 
        - name: api_key
      - examples: [{contentType=application/json, example={
-  "key" : 7
+  "key" : 0
 }}]
 
      - returns: RequestBuilder<[String:Int32]> 
@@ -156,7 +156,7 @@ open class StoreAPI: APIBase {
 
     /**
      Find purchase order by ID
-     - GET /store/order/{orderId}
+     - GET /store/order/{order_id}
      - For valid response try integer IDs with value <= 5 or > 10. Other values will generated exceptions
      - examples: [{contentType=application/xml, example=<Order>
   <id>123456789</id>
@@ -167,8 +167,8 @@ open class StoreAPI: APIBase {
   <complete>true</complete>
 </Order>}, {contentType=application/json, example={
   "petId" : 6,
-  "quantity" : 0,
-  "id" : 5,
+  "quantity" : 1,
+  "id" : 0,
   "shipDate" : "2000-01-23T04:56:07.000+00:00",
   "complete" : false,
   "status" : "placed"
@@ -182,8 +182,8 @@ open class StoreAPI: APIBase {
   <complete>true</complete>
 </Order>}, {contentType=application/json, example={
   "petId" : 6,
-  "quantity" : 0,
-  "id" : 5,
+  "quantity" : 1,
+  "id" : 0,
   "shipDate" : "2000-01-23T04:56:07.000+00:00",
   "complete" : false,
   "status" : "placed"
@@ -194,8 +194,8 @@ open class StoreAPI: APIBase {
      - returns: RequestBuilder<Order> 
      */
     open class func getOrderByIdWithRequestBuilder(orderId: Int64) -> RequestBuilder<Order> {
-        var path = "/store/order/{orderId}"
-        path = path.replacingOccurrences(of: "{orderId}", with: "\(orderId)", options: .literal, range: nil)
+        var path = "/store/order/{order_id}"
+        path = path.replacingOccurrences(of: "{order_id}", with: "\(orderId)", options: .literal, range: nil)
         let URLString = PetstoreClientAPI.basePath + path
         let parameters: [String:Any]? = nil
 
@@ -251,9 +251,9 @@ open class StoreAPI: APIBase {
   <status>aeiou</status>
   <complete>true</complete>
 </Order>}, {contentType=application/json, example={
-  "petId" : 3,
-  "quantity" : 8,
-  "id" : 8,
+  "petId" : 6,
+  "quantity" : 1,
+  "id" : 0,
   "shipDate" : "2000-01-23T04:56:07.000+00:00",
   "complete" : false,
   "status" : "placed"
@@ -266,9 +266,9 @@ open class StoreAPI: APIBase {
   <status>aeiou</status>
   <complete>true</complete>
 </Order>}, {contentType=application/json, example={
-  "petId" : 3,
-  "quantity" : 8,
-  "id" : 8,
+  "petId" : 6,
+  "quantity" : 1,
+  "id" : 0,
   "shipDate" : "2000-01-23T04:56:07.000+00:00",
   "complete" : false,
   "status" : "placed"
